@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 33367410083986196}
   - component: {fileID: 23396458874357882}
   - component: {fileID: 95724630246274328}
+  - component: {fileID: -5863585288500697923}
   m_Layer: 0
   m_Name: barrier
   m_TagString: Untagged
@@ -579,3 +580,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &-5863585288500697923
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946707185040322}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2282281, y: 0.57200855, z: 0.04404035}
+  m_Center: {x: -0.0003606975, y: 0.28803983, z: 0}

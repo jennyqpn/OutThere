@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4493868724523420}
   - component: {fileID: 111799331482195238}
+  - component: {fileID: -390934345367112609}
   m_Layer: 0
   m_Name: grass_one
   m_TagString: Untagged
@@ -173,6 +174,19 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!65 &-390934345367112609
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448497385672866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1610951804217452
 GameObject:
   m_ObjectHideFlags: 0

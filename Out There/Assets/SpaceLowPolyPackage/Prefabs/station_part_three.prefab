@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 4565111379769002}
   - component: {fileID: 33412099293731544}
   - component: {fileID: 23632320969233704}
+  - component: {fileID: 7729551280272096420}
   m_Layer: 0
   m_Name: station_part_three
   m_TagString: Untagged
@@ -243,3 +244,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7729551280272096420
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548179478311148}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.231477, y: 2.7148523, z: 2.2314773}
+  m_Center: {x: 0.03622639, y: 1.3762081, z: 0}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4201131120721194}
   - component: {fileID: 33472779784950080}
   - component: {fileID: 23460613829822538}
+  - component: {fileID: 7092174627478416318}
   m_Layer: 0
   m_Name: landscape_nine
   m_TagString: Untagged
@@ -80,3 +81,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7092174627478416318
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139866305614250}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9238782, y: 2.0626678, z: 2.9238784}
+  m_Center: {x: 0.012452543, y: 1.0475473, z: -0.0364511}
