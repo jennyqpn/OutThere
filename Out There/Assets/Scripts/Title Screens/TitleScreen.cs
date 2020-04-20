@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
@@ -43,6 +42,15 @@ public class TitleScreen : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Quit");
+    }
+    public void InfoButton()
+    {
+        SceneManager.LoadScene("Information");
+    }
+
+    public void CreditsButton()
+    {
+        SceneManager.LoadScene("Credits");
     }
 
     public void SetVolume(float volume)

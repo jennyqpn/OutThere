@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreen.unity
     guid: cdd25ee4127b45042a767a7481f0f280
   - enabled: 1
+    path: Assets/Scenes/Information.unity
+    guid: 12d3f326632cab246b92dab91dac3c1a
+  - enabled: 1
     path: Assets/Scenes/Farm.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
@@ -17,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CoffeeShop.unity
     guid: 3922ec3d3b2b641dfb821adf64f41b3e
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 07a38d6f89584ab41aa686a5b41c6fa4
   m_configObjects: {}
