@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fluid
   - Farm_To_Town
+  - Tools
   layers:
   - Default
   - TransparentFX
