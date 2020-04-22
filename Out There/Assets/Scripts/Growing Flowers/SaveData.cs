@@ -9,6 +9,8 @@ public class SaveData : MonoBehaviour
 	{
 		public PlotState.PlotType plotType;
 		public PlotState.PlantGrowth plantGrowth;
+		public bool canGrow;
+		public string flowerNum;
 	}
 
 	public static plotInfo[,] plotList = new plotInfo[5, 5];
@@ -16,7 +18,7 @@ public class SaveData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		if (SceneManager.GetActiveScene().name == "Farm")
+		if (SceneManager.GetActiveScene().name == "Information")
 		{
 			for (int i = 0; i < 5; i++)
 			{
@@ -24,6 +26,8 @@ public class SaveData : MonoBehaviour
 				{
 					plotList[i, j].plotType = PlotState.PlotType.Empty;
 					plotList[i, j].plantGrowth = PlotState.PlantGrowth.Empty;
+					plotList[i, j].canGrow = false;
+					plotList[i, j].flowerNum = "empty";
 				}
 			}
 		}
