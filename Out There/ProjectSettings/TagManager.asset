@@ -9,6 +9,8 @@ TagManager:
   - Tools
   - Fire
   - Plot
+  - satellite
+  - Save Data
   layers:
   - Default
   - TransparentFX
