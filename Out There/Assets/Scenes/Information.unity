@@ -204,6 +204,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &151988475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 151988477}
+  - component: {fileID: 151988476}
+  m_Layer: 0
+  m_Name: ContinueToFarm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &151988476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151988475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4c2dfd9296048d7a4112abd181618b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &151988477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151988475}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 210.88268, y: -131.91362, z: 601.95087}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &451355259
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.5, y: 13}
+  m_AnchoredPosition: {x: -5, y: 129}
   m_SizeDelta: {x: 701, y: 397.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1236590889
@@ -498,14 +541,14 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Name: Out There\nCourse Number: CMPS 427\nTerm/Year: Spring 2020\nTeam:\n\tJenny
+  m_Text: "Name: Out There\nCourse: CMPS 427\nSemester: Spring 2020\nTeam Members:\n\n\tJenny
     Nguyen\r\n\tJonathan Benoit\r\n\tJordan Williams\r\n\tLeah Domas\r\n\nIntructions:
-    \n\nPlant crops and harvest them to collect money! Talk to the man with NASA
-    for guidence! visit the town to build relationships with people! Upgrade your
-    tools and make the decison to help earth or your new alien friends!\n\nCheat:
-    F9"
+    \n\nPlant crops and harvest them to collect money! Visit the town to build relationships
+    with people! Upgrade your tools! If you get stuck, feel free to talk to the NASA
+    representative for guidence. In the end, will you decide to help earth or your
+    new alien friends?\n\nCheat: F9\n\n\n\nPress Space to continue!\n"
 --- !u!222 &1236590890
 CanvasRenderer:
   m_ObjectHideFlags: 0
