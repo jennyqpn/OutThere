@@ -7,6 +7,8 @@ TagManager:
   - Fluid
   - Farm_To_Town
   - Tools
+  - Fire
+  - Plot
   layers:
   - Default
   - TransparentFX
