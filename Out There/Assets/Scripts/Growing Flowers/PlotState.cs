@@ -30,22 +30,19 @@ public class PlotState : MonoBehaviour
     void Update()
     {
 		Holding.Flowers flower = player.GetComponent<Holding>().flowers;
-		if (canGrow)
+		if (canGrow)//If the player is on top of the plot and it is empty or has a grown flower on it
 		{
-			if (canPick)
+			if (canPick)//If the plot has a grown flower on it
 			{
 				if (Input.GetMouseButtonDown(0) && canGrow)
 				{
 					canPick = false;
-					gameObject.transform.Find("Empty Plot").gameObject.SetActive(true);
-					gameObject.transform.Find("flower" + flowerNum + "Grown").gameObject.SetActive(false);
-					plotType = PlotType.Empty;
-					plantGrowth = PlantGrowth.Empty;
+					GrownToEmpty(flowerNum);
 				}
 			}
-			else if (Input.GetMouseButtonDown(0))
+			else if (Input.GetMouseButtonDown(0))//The plot is empty
 			{
-				if (flower != Holding.Flowers.None)
+				if (flower != Holding.Flowers.None)//The player is holding a flower
 				{
 					canGrow = false;
 				}
@@ -55,49 +52,67 @@ public class PlotState : MonoBehaviour
 						plotType = PlotType.Flower1;
 						plantGrowth = PlantGrowth.Seed;
 						Debug.Log("1");
-						StartCoroutine(SwitchPlot("1"));
+						flowerNum = "1";
+						EmptyToSeed(flowerNum);
 						break;
 					case Holding.Flowers.Flower2:
 						plotType = PlotType.Flower2;
 						plantGrowth = PlantGrowth.Seed;
 						Debug.Log("2");
-						StartCoroutine(SwitchPlot("2"));
+						flowerNum = "2";
+						EmptyToSeed(flowerNum);
 						break;
 					case Holding.Flowers.Flower3:
 						plotType = PlotType.Flower3;
 						plantGrowth = PlantGrowth.Seed;
 						Debug.Log("3");
-						StartCoroutine(SwitchPlot("3"));
+						flowerNum = "3";
+						EmptyToSeed(flowerNum);
 						break;
 					case Holding.Flowers.Flower4:
 						plotType = PlotType.Flower4;
 						plantGrowth = PlantGrowth.Seed;
 						Debug.Log("4");
-						StartCoroutine(SwitchPlot("4"));
+						flowerNum = "4";
+						EmptyToSeed(flowerNum);
 						break;
 					case Holding.Flowers.Flower5:
 						plotType = PlotType.Flower5;
 						plantGrowth = PlantGrowth.Seed;
 						Debug.Log("5");
-						StartCoroutine(SwitchPlot("5"));
+						flowerNum = "5";
+						EmptyToSeed(flowerNum);
 						break;
 					case Holding.Flowers.Flower6:
 						plotType = PlotType.Flower6;
 						plantGrowth = PlantGrowth.Seed;
 						Debug.Log("6");
-						StartCoroutine(SwitchPlot("6"));
+						flowerNum = "6";
+						EmptyToSeed(flowerNum);
 						break;
 					case Holding.Flowers.Flower7:
 						plotType = PlotType.Flower7;
 						plantGrowth = PlantGrowth.Seed;
 						Debug.Log("7");
-						StartCoroutine(SwitchPlot("7"));
+						flowerNum = "7";
+						EmptyToSeed(flowerNum);
 						break;
 					case Holding.Flowers.None:
 						Debug.Log("Empty");
+						flowerNum = "Empty";
 						break;
 				}
 			}
+		}
+
+		switch (plantGrowth)
+		{
+			case PlantGrowth.Seed:
+				StartCoroutine(SeedToGrowing(flowerNum));
+				break;
+			case PlantGrowth.Growing:
+				StartCoroutine(GrowingToGrown(flowerNum));
+				break;
 		}
 	}
 
@@ -111,28 +126,38 @@ public class PlotState : MonoBehaviour
 
 	private void OnTriggerExit(Collider other)
 	{
-		if (plotType == PlotType.Empty || canPick)
-		{
-			canGrow = false;
-		}
+		canGrow = false;
 	}
 
-	IEnumerator SwitchPlot(string num)
+	void EmptyToSeed(string num)
 	{
-		flowerNum = num;
 		gameObject.transform.Find("flower" + num + "Seed").gameObject.SetActive(true);
 		gameObject.transform.Find("Empty Plot").gameObject.SetActive(false);
-		yield return new WaitForSeconds(5);
+		plantGrowth = PlantGrowth.Seed;
+	}
 
-		plantGrowth = PlantGrowth.Growing;
+	IEnumerator SeedToGrowing(string num)
+	{
+		yield return new WaitForSeconds(5);
 		gameObject.transform.Find("flower" + num + "Growing").gameObject.SetActive(true);
 		gameObject.transform.Find("flower" + num + "Seed").gameObject.SetActive(false);
+		plantGrowth = PlantGrowth.Growing;
+	}
 
+	IEnumerator GrowingToGrown(string num)
+	{
 		yield return new WaitForSeconds(5);
-
-		plantGrowth = PlantGrowth.Grown;
 		gameObject.transform.Find("flower" + num + "Grown").gameObject.SetActive(true);
 		gameObject.transform.Find("flower" + num + "Growing").gameObject.SetActive(false);
+		plantGrowth = PlantGrowth.Grown;
 		canPick = true;
+	}
+
+	void GrownToEmpty(string num)
+	{
+		gameObject.transform.Find("Empty Plot").gameObject.SetActive(true);
+		gameObject.transform.Find("flower" + num + "Grown").gameObject.SetActive(false);
+		plotType = PlotType.Empty;
+		plantGrowth = PlantGrowth.Empty;
 	}
 }
