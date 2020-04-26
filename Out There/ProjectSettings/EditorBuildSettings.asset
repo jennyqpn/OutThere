@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 07a38d6f89584ab41aa686a5b41c6fa4
+  - enabled: 1
+    path: Assets/Scenes/Wilderness.unity
+    guid: c8ca58327a5d44e1bb2552afafb08851
   m_configObjects: {}
