@@ -23,6 +23,7 @@ public class Coffee_To_Town : MonoBehaviour
 
         if(col.gameObject.CompareTag("Player"))
         {
+			SaveData.lastScene = "CoffeeShop";
             SceneManager.LoadScene("Town");
         }
     }

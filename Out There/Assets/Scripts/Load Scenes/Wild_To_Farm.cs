@@ -26,7 +26,8 @@ public class Wild_To_Farm : MonoBehaviour
 
         if(col.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Farm");
+			SaveData.lastScene = "Wilderness";
+			SceneManager.LoadScene("Farm");
         }
     }
 
