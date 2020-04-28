@@ -3,14 +3,10 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
-
+    public GameObject InvUI;
     Inventory inventory;
 
     public Transform itemsParent;
-
-    InventorySlot[] slots;
-
-    public GameObject InvUI;
 
 	bool canSwitch;
     // Start is called before the first frame update
@@ -19,28 +15,29 @@ public class InventoryUI : MonoBehaviour
         inventory = Inventory.instance;
         inventory.onItemChangedCallback += UpdateUI;
 		canSwitch = true;
-        slots = itemsParent.GetComponentsInChildren<InventorySlot>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetKey(KeyCode.I) && canSwitch)
         {
 			canSwitch = false;
             InvUI.SetActive(!InvUI.activeSelf);
 			StartCoroutine(Switch());
+            UpdateUI();
         }
     }
 
     void UpdateUI()
-    {   
-        for(int i = 0; i < slots.Length; i++)
+    {
+        InventorySlot[] slots = GetComponentsInChildren<InventorySlot>();
+
+        for (int i = 0; i < slots.Length; i++)
         {
-            if (i < inventory.items.Count)
+            if (i < Inventory.items.Count)
             {
-                slots[i].AddItem(inventory.items[i]);
+                slots[i].AddItem(Inventory.items[i]);
             }else
             {
                 slots[i].ClearSpot();
