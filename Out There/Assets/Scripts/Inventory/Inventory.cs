@@ -18,7 +18,7 @@ public class Inventory : MonoBehaviour
             Debug.Log("More than one instance of inventory");
             return;
         }
-        instance = this;
+		instance = this;
     }
 
     public bool AddItem (Item item)

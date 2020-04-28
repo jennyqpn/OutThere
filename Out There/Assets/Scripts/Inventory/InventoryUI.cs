@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -11,21 +12,25 @@ public class InventoryUI : MonoBehaviour
 
     public GameObject InvUI;
 
+	bool canSwitch;
     // Start is called before the first frame update
     void Start()
     {
         inventory = Inventory.instance;
         inventory.onItemChangedCallback += UpdateUI;
-
+		canSwitch = true;
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.I))
+
+        if (Input.GetKey(KeyCode.I) && canSwitch)
         {
+			canSwitch = false;
             InvUI.SetActive(!InvUI.activeSelf);
+			StartCoroutine(Switch());
         }
     }
 
@@ -43,4 +48,10 @@ public class InventoryUI : MonoBehaviour
         }
         Debug.Log("Updating UI...");
     }
+
+	IEnumerator Switch()
+	{
+		yield return new WaitForSecondsRealtime(0.2f);
+		canSwitch = true;
+	}
 }

@@ -33,7 +33,7 @@ public class SaveData : MonoBehaviour
 		}
 	}
 
-    // Update is called once per frame
+    /*Update is called once per frame
     void Update()
     {
 		string str = "";
@@ -42,5 +42,5 @@ public class SaveData : MonoBehaviour
 			str += "[" + info.plotType + "," + info.plantGrowth + "] ";
 		}
 		Debug.Log(str + "\n");
-    }
+    }*/
 }
