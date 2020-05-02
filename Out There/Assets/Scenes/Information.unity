@@ -509,7 +509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 129}
+  m_AnchoredPosition: {x: -5, y: 66}
   m_SizeDelta: {x: 701, y: 397.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1236590889
@@ -543,12 +543,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Name: Out There\nCourse: CMPS 427\nSemester: Spring 2020\nTeam Members:\n\n\tJenny
-    Nguyen\r\n\tJonathan Benoit\r\n\tJordan Williams\r\n\tLeah Domas\r\n\nIntructions:
-    \n\nPlant crops and harvest them to collect money! Visit the town to build relationships
-    with people! Upgrade your tools! If you get stuck, feel free to talk to the NASA
-    representative for guidence. In the end, will you decide to help earth or your
-    new alien friends?\n\nCheat: F9\n\n\n\nPress Space to continue!\n"
+  m_Text: "Name: Out There\nCourse: CMPS 427\nSemester: Spring 2020\n\nTeam Members:
+    Jenny Nguyen\r, Jonathan Benoit\r, Jordan Williams\r, Leah Domas\r\n\nIntructions:
+    \nYour mission is to terraform this small planet. Your first task is to meet
+    and become friends with the locals. The more you talk to them, the more friendlier
+    they become!\n\nControls:\n\tCheat - C\n\tInventory - I\n\tMove - WASD\n\n\nPress
+    Space to continue!\n"
 --- !u!222 &1236590890
 CanvasRenderer:
   m_ObjectHideFlags: 0
