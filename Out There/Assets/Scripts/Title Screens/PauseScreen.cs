@@ -16,6 +16,8 @@ public class PauseScreen : MonoBehaviour
                 Resume();
             } else
             {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
                 Pause();
             }
         }
@@ -24,6 +26,8 @@ public class PauseScreen : MonoBehaviour
 
     public void Resume()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         pauseScreen.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
