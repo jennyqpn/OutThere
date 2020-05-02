@@ -7,6 +7,7 @@ public class InventoryUI : MonoBehaviour
     Inventory inventory;
 
     public Transform itemsParent;
+    bool on = false;
 
 	bool canSwitch;
     // Start is called before the first frame update
@@ -22,10 +23,15 @@ public class InventoryUI : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.I) && canSwitch)
         {
+            on = !on;
 			canSwitch = false;
             InvUI.SetActive(!InvUI.activeSelf);
 			StartCoroutine(Switch());
             UpdateUI();
+        }
+        if (on) {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
