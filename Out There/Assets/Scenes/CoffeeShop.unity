@@ -7195,13 +7195,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 15.701492, w: 4.4165044}
   m_textInfo:
     textComponent: {fileID: 630562912}
-    characterCount: 21
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 3
-    wordCount: 4
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -10491,6 +10491,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c971a8a1f10c26c48a077a7a1f6ed2c3, type: 3}
+--- !u!1 &872787974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7386641539052742269, guid: c971a8a1f10c26c48a077a7a1f6ed2c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 872787973}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &872787975 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7386641539062257085, guid: c971a8a1f10c26c48a077a7a1f6ed2c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 872787973}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &872787976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872787974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7569440cda9eb514b85ff269a0f0c39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 872787975}
 --- !u!4 &877770993 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010118387548690, guid: 5090b9010d8ca4476a4f9b1315906d61,
