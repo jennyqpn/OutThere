@@ -29,7 +29,7 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    void UpdateUI()
+    public void UpdateUI()
     {
         InventorySlot[] slots = GetComponentsInChildren<InventorySlot>();
 
