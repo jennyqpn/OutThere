@@ -43,7 +43,7 @@ public class PlotState : MonoBehaviour
 		plotList[plotX - 1, plotY - 1].flowerNum = flowerNum;
 		plotList[plotX - 1, plotY - 1].plotType = plotType;
 		plotList[plotX - 1, plotY - 1].plantGrowth = plantGrowth;
-		Holding.Flowers flower = player.GetComponent<Holding>().flowers;
+		string item = Holding.itemHolding;
 		if (canGrow)//If the player is on top of the plot and it is empty or has a grown flower on it
 		{
 			if (plantGrowth == PlantGrowth.Grown)//If the plot has a grown flower on it
@@ -55,55 +55,55 @@ public class PlotState : MonoBehaviour
 			}
 			else if (Input.GetMouseButtonDown(0))//The plot is empty
 			{
-				if (flower != Holding.Flowers.None)//The player is holding a flower
+				if (!item.StartsWith("Flower"))//The player is holding a flower
 				{
 					canGrow = false;
 				}
 
-				switch (flower) {
-					case Holding.Flowers.Flower1:
+				switch (item) {
+					case "Flower 1":
 						plotType = PlotType.Flower1;
 						//Debug.Log("1");
 						flowerNum = "1";
 						EmptyToSeed(flowerNum);
 						break;
-					case Holding.Flowers.Flower2:
+					case "Flower 2":
 						plotType = PlotType.Flower2;
 						//Debug.Log("2");
 						flowerNum = "2";
 						EmptyToSeed(flowerNum);
 						break;
-					case Holding.Flowers.Flower3:
+					case "Flower 3":
 						plotType = PlotType.Flower3;
 						//Debug.Log("3");
 						flowerNum = "3";
 						EmptyToSeed(flowerNum);
 						break;
-					case Holding.Flowers.Flower4:
+					case "Flower 4":
 						plotType = PlotType.Flower4;
 						//Debug.Log("4");
 						flowerNum = "4";
 						EmptyToSeed(flowerNum);
 						break;
-					case Holding.Flowers.Flower5:
+					case "Flower 5":
 						plotType = PlotType.Flower5;
 						//Debug.Log("5");
 						flowerNum = "5";
 						EmptyToSeed(flowerNum);
 						break;
-					case Holding.Flowers.Flower6:
+					case "Flower 6":
 						plotType = PlotType.Flower6;
 						//Debug.Log("6");
 						flowerNum = "6";
 						EmptyToSeed(flowerNum);
 						break;
-					case Holding.Flowers.Flower7:
+					case "Flower  7":
 						plotType = PlotType.Flower7;
 						//Debug.Log("7");
 						flowerNum = "7";
 						EmptyToSeed(flowerNum);
 						break;
-					case Holding.Flowers.None:
+					default:
 						//Debug.Log("Empty");
 						flowerNum = "Empty";
 						break;

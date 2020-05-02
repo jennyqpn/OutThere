@@ -11,6 +11,7 @@ public class Item : ScriptableObject
 
     public virtual void Use()
     {
+		Holding.itemHolding = name;
         Debug.Log("Using: " + name);
     }
 
