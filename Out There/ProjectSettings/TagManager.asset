@@ -11,6 +11,7 @@ TagManager:
   - Plot
   - satellite
   - Save Data
+  - npc
   layers:
   - Default
   - TransparentFX

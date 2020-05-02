@@ -41,6 +41,6 @@ public class SaveData : MonoBehaviour
 		{
 			str += "[" + info.plotType + "," + info.plantGrowth + "] ";
 		}
-		Debug.Log(str + "\n");
+		//Debug.Log(str + "\n");
     }
 }

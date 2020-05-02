@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff09f895581a24549821b2ce0a32d84f, type: 3}
+  m_Name: ashley
+  m_EditorClassIdentifier: 
+  name: New NPC
+  icon:
+  - {fileID: 21300000, guid: 1d51e26d61416974eb341e77b4ed8684, type: 3}
+  - {fileID: 21300000, guid: 7757a3d94ef891b49a9129591690efec, type: 3}
+  - {fileID: 21300000, guid: 352ddae74f18c3b4185df62e1d3de753, type: 3}
+  isDefault: 0
+  dialogue:
+  - Hey! Marina told me all about you. I'm Ashley!
+  - I'm an engineer, but I also like to sing. It's a hobby of mine.
+  - If you ever need a house upgrade, let me know!
+  - I'm not really feeling well right now. Terrible migraine.
+  - I thought I had this figured out. Turns out I'm right back where I started.
+  - Maybe we're all just cogs in the machine.
+  - I'm so glad you stopped by, I could use the company.
+  - I'd like to write a song about you someday.
+  - Maybe when you're not busy, we can take a walk out into the wildlands together.
+  friendship: 0

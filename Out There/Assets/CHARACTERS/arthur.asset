@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff09f895581a24549821b2ce0a32d84f, type: 3}
+  m_Name: arthur
+  m_EditorClassIdentifier: 
+  name: New NPC
+  icon:
+  - {fileID: 21300000, guid: 567cbc396e4a3f04e958822100bd631d, type: 3}
+  - {fileID: 21300000, guid: df7d7b18ccd3f554fb3f4f8673e5f52e, type: 3}
+  - {fileID: 21300000, guid: 318c2da3b90e6484cbf7e526e064ad47, type: 3}
+  isDefault: 0
+  dialogue:
+  - Hi there... I'm Arthur. I just make coffee here..
+  - What's your favorite roast? Mine is um...blonde.
+  - It's not easy being here, but I'm glad to bring everyone together with a cup
+    of coffee.
+  - I don't get a lot of sleep. I have a bit of a caffeine addiction.
+  - Nothing's worse than a burnt pot and wasted beans..
+  - Sometimes I wonder if I'm even cut out for this.
+  - H-hey... Back for more coffee?
+  - Maybe I could teach you how to brew sometime...If you'd like that.
+  - What a coincidence. I just finished baking your favorite muffins...haha...
+  friendship: 0

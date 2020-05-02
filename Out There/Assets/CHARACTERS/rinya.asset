@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff09f895581a24549821b2ce0a32d84f, type: 3}
+  m_Name: rinya
+  m_EditorClassIdentifier: 
+  name: New NPC
+  icon:
+  - {fileID: 21300000, guid: 7eb6d573b153a694594220eaf5bb2231, type: 3}
+  - {fileID: 21300000, guid: 2bcb1b794cee2b140b9f48370e33c976, type: 3}
+  - {fileID: 21300000, guid: 510dc5237bce9184c969848cd604d322, type: 3}
+  isDefault: 0
+  dialogue:
+  - Hey! you must be the new human. I'm Rinya.
+  - My name in our language means "vast." What does yours mean?
+  - I wonder what Earth is like compared to here.
+  - I saw a flower yesterday but now it's gone. Oh well.
+  - Sometimes I hear the human man over there scoff when I walk by.
+  - Do you think you'll go back home eventually?
+  - Oh you're so sweet to talk to me so often.
+  - Maybe you could let me visit your farm sometime.
+  - Humans are so adorable. Well, mostly you.
+  friendship: 0

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff09f895581a24549821b2ce0a32d84f, type: 3}
+  m_Name: aman
+  m_EditorClassIdentifier: 
+  name: New NPC
+  icon:
+  - {fileID: 21300000, guid: 624a27e505629d34a9cb0e9819bec8ea, type: 3}
+  - {fileID: 21300000, guid: 4c3e6324393f1ab46a4c72ca72f8daeb, type: 3}
+  - {fileID: 21300000, guid: 3c0117c4ac436674595f8eade59a2879, type: 3}
+  isDefault: 0
+  dialogue:
+  - Hey. My name is Aman.
+  - I work for NASA. You might have heard of them.
+  - If you ever have things to sell, bring them to me. Money is no issue for science.
+  - Don't you have someone else to bother?
+  - The creatures of this planet disgust me.
+  - I'd rather be back home then have to deal with another rabid plant.
+  - What? Did you come just for me?
+  - At least you're quiet. I like that about you.
+  - Sometimes I think you pester me in purpose.
+  friendship: 0
