@@ -7,15 +7,12 @@ public class ItemPickup : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            var itemPickedUp = Inventory.instance.AddItem(item);
-            if (itemPickedUp)
-            {
-                Debug.Log("Item picked up! " + "It is: " + item.name);
+            if (Inventory.items.Count < 9) {
+                Inventory.instance.AddItem(item);
                 Destroy(gameObject);
-            } 
-            else
-            {
-                Debug.Log("You have no space!");
+            }
+            else {
+                Debug.Log("inventory full");
             }
         }
     }

@@ -12,6 +12,7 @@ TagManager:
   - satellite
   - Save Data
   - npc
+  - Start Box
   layers:
   - Default
   - TransparentFX
