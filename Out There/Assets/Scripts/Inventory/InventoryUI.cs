@@ -24,14 +24,20 @@ public class InventoryUI : MonoBehaviour
         if (Input.GetKey(KeyCode.I) && canSwitch)
         {
             on = !on;
+			if (on)
+			{
+				Cursor.visible = true;
+				Cursor.lockState = CursorLockMode.None;
+			}
+			else
+			{
+				Cursor.visible = false;
+				Cursor.lockState = CursorLockMode.Locked;
+			}
 			canSwitch = false;
             InvUI.SetActive(!InvUI.activeSelf);
 			StartCoroutine(Switch());
             UpdateUI();
-        }
-        if (on) {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
         }
     }
 
