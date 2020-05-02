@@ -15,11 +15,13 @@ public class SaveData : MonoBehaviour
 
 	public static plotInfo[,] plotList = new plotInfo[5, 5];
 	public static string lastScene;
+
     // Start is called before the first frame update
     void Start()
     {
 		if (SceneManager.GetActiveScene().name == "Information")
 		{
+			SaveData.lastScene = "Information";
 			for (int i = 0; i < 5; i++)
 			{
 				for (int j = 0; j < 5; j++)
@@ -33,7 +35,7 @@ public class SaveData : MonoBehaviour
 		}
 	}
 
-    // Update is called once per frame
+    /*Update is called once per frame
     void Update()
     {
 		string str = "";
@@ -42,5 +44,5 @@ public class SaveData : MonoBehaviour
 			str += "[" + info.plotType + "," + info.plantGrowth + "] ";
 		}
 		Debug.Log(str + "\n");
-    }
+    }*/
 }

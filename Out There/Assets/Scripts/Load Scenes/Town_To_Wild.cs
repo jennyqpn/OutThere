@@ -24,7 +24,8 @@ public class Town_To_Wild : MonoBehaviour
 
         if(col.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Wilderness");
+			SaveData.lastScene = "Town";
+			SceneManager.LoadScene("Wilderness");
         }
     }
 }

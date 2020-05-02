@@ -4,24 +4,19 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public List<Item> items = new List<Item>();
+    public static List<Item> items = new List<Item>();
     public int space = 20;
-    public static Inventory instance;
 
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
 
+    public static Inventory instance;
     private void Awake()
     {
-        if (instance != null)
-        {
-            Debug.Log("More than one instance of inventory");
-            return;
-        }
-        instance = this;
+		instance = this;
     }
 
-    public bool AddItem (Item item)
+    public void AddItem (Item item)
     {
         if (items.Count < 20) {
             items.Add(item);
@@ -29,10 +24,7 @@ public class Inventory : MonoBehaviour
             {
                 onItemChangedCallback.Invoke();
             }
-            return true;
         }
-
-        return false;
     }
     public void RemoveItem(Item item)
     {

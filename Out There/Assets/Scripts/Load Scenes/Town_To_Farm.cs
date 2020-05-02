@@ -23,7 +23,8 @@ public class Town_To_Farm : MonoBehaviour
 
         if(col.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Farm");
+			SaveData.lastScene = "Town";
+			SceneManager.LoadScene("Farm");
         }
     }
 }

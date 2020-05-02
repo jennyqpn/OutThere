@@ -63,48 +63,48 @@ public class PlotState : MonoBehaviour
 				switch (flower) {
 					case Holding.Flowers.Flower1:
 						plotType = PlotType.Flower1;
-						Debug.Log("1");
+						//Debug.Log("1");
 						flowerNum = "1";
 						EmptyToSeed(flowerNum);
 						break;
 					case Holding.Flowers.Flower2:
 						plotType = PlotType.Flower2;
-						Debug.Log("2");
+						//Debug.Log("2");
 						flowerNum = "2";
 						EmptyToSeed(flowerNum);
 						break;
 					case Holding.Flowers.Flower3:
 						plotType = PlotType.Flower3;
-						Debug.Log("3");
+						//Debug.Log("3");
 						flowerNum = "3";
 						EmptyToSeed(flowerNum);
 						break;
 					case Holding.Flowers.Flower4:
 						plotType = PlotType.Flower4;
-						Debug.Log("4");
+						//Debug.Log("4");
 						flowerNum = "4";
 						EmptyToSeed(flowerNum);
 						break;
 					case Holding.Flowers.Flower5:
 						plotType = PlotType.Flower5;
-						Debug.Log("5");
+						//Debug.Log("5");
 						flowerNum = "5";
 						EmptyToSeed(flowerNum);
 						break;
 					case Holding.Flowers.Flower6:
 						plotType = PlotType.Flower6;
-						Debug.Log("6");
+						//Debug.Log("6");
 						flowerNum = "6";
 						EmptyToSeed(flowerNum);
 						break;
 					case Holding.Flowers.Flower7:
 						plotType = PlotType.Flower7;
-						Debug.Log("7");
+						//Debug.Log("7");
 						flowerNum = "7";
 						EmptyToSeed(flowerNum);
 						break;
 					case Holding.Flowers.None:
-						Debug.Log("Empty");
+						//Debug.Log("Empty");
 						flowerNum = "Empty";
 						break;
 				}
@@ -116,11 +116,11 @@ public class PlotState : MonoBehaviour
 			switch (plantGrowth)
 			{
 				case PlantGrowth.Seed:
-					Debug.Log("Seed");
+					//Debug.Log("Seed");
 					StartCoroutine(SeedToGrowing(flowerNum));
 					break;
 				case PlantGrowth.Growing:
-					Debug.Log("Growing");
+					//Debug.Log("Growing");
 					StartCoroutine(GrowingToGrown(flowerNum));
 					break;
 			}
