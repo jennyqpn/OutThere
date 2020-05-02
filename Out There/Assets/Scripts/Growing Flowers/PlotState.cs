@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class PlotState : MonoBehaviour
 	string flowerNum;
 	public int plotX;
 	public int plotY;
+	public List<Item> flowerItems;
+
 
 	//Plot Type
 	public enum PlotType { Empty, Flower1, Flower2, Flower3, Flower4, Flower5, Flower6, Flower7 }
@@ -44,14 +47,19 @@ public class PlotState : MonoBehaviour
 		plotList[plotX - 1, plotY - 1].plotType = plotType;
 		plotList[plotX - 1, plotY - 1].plantGrowth = plantGrowth;
 		string item = Holding.itemHolding;
+		List<Item> items = Inventory.items;
 		if (canGrow)//If the player is on top of the plot and it is empty or has a grown flower on it
 		{
 			if (plantGrowth == PlantGrowth.Grown)//If the plot has a grown flower on it
 			{
 				if (Input.GetMouseButtonDown(0) && canGrow)
 				{
+					Item newItem = flowerItems[Int32.Parse(flowerNum) - 1];
+					Inventory.instance.AddItem(newItem);
+					Inventory.instance.AddItem(newItem);
 					GrownToEmpty(flowerNum);
 				}
+
 			}
 			else if (Input.GetMouseButtonDown(0))//The plot is empty
 			{
@@ -66,42 +74,49 @@ public class PlotState : MonoBehaviour
 						//Debug.Log("1");
 						flowerNum = "1";
 						EmptyToSeed(flowerNum);
+						lowerQuantity(items, item);
 						break;
 					case "Flower 2":
 						plotType = PlotType.Flower2;
 						//Debug.Log("2");
 						flowerNum = "2";
 						EmptyToSeed(flowerNum);
+						lowerQuantity(items, item);
 						break;
 					case "Flower 3":
 						plotType = PlotType.Flower3;
 						//Debug.Log("3");
 						flowerNum = "3";
 						EmptyToSeed(flowerNum);
+						lowerQuantity(items, item);
 						break;
 					case "Flower 4":
 						plotType = PlotType.Flower4;
 						//Debug.Log("4");
 						flowerNum = "4";
 						EmptyToSeed(flowerNum);
+						lowerQuantity(items, item);
 						break;
 					case "Flower 5":
 						plotType = PlotType.Flower5;
 						//Debug.Log("5");
 						flowerNum = "5";
 						EmptyToSeed(flowerNum);
+						lowerQuantity(items, item);
 						break;
 					case "Flower 6":
 						plotType = PlotType.Flower6;
 						//Debug.Log("6");
 						flowerNum = "6";
 						EmptyToSeed(flowerNum);
+						lowerQuantity(items, item);
 						break;
 					case "Flower  7":
 						plotType = PlotType.Flower7;
 						//Debug.Log("7");
 						flowerNum = "7";
 						EmptyToSeed(flowerNum);
+						lowerQuantity(items, item);
 						break;
 					default:
 						//Debug.Log("Empty");
@@ -128,6 +143,28 @@ public class PlotState : MonoBehaviour
 
 	}
 
+	void lowerQuantity(List<Item> items, string item)
+	{
+		for(int i = 0; i < items.Count; i++)
+		{
+			if (items[i].name == item)
+			{
+				if (items[i].quantity <= 1)
+				{
+					if (i != items.Count - 1)
+					{
+						Holding.itemHolding = items[i + 1].name;
+					}
+					else
+					{
+						Holding.itemHolding = "none";
+					}
+				}
+				Inventory.instance.RemoveItem(items[i]);
+				break;
+			}
+		}
+	}
 	private void OnTriggerStay(Collider other)
 	{
 		if(plotType == PlotType.Empty || plantGrowth == PlantGrowth.Grown)

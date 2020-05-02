@@ -37,9 +37,10 @@ public class InventoryUI : MonoBehaviour
 			canSwitch = false;
             InvUI.SetActive(!InvUI.activeSelf);
 			StartCoroutine(Switch());
-            UpdateUI();
+            //UpdateUI();
         }
-    }
+		UpdateUI();
+	}
 
     public void UpdateUI()
     {

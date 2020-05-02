@@ -18,17 +18,32 @@ public class Inventory : MonoBehaviour
 
     public void AddItem (Item item)
     {
-        if (items.Count < 20) {
+		if (items.Contains(item))
+		{
+			int itemIndex = items.IndexOf(item);
+			items[itemIndex].quantity += 1;
+		}else if (items.Count < 9) {
             items.Add(item);
-            if (onItemChangedCallback != null)
+			int itemIndex = items.IndexOf(item);
+			items[itemIndex].quantity += 1;
+			if (onItemChangedCallback != null)
             {
                 onItemChangedCallback.Invoke();
             }
         }
+		int itemI = items.IndexOf(item);
+
+		Debug.Log(items[itemI].quantity);
     }
     public void RemoveItem(Item item)
     {
-        items.Remove(item);
+		int itemIndex = items.IndexOf(item);
+		items[itemIndex].quantity -= 1;
+
+		if (items[itemIndex].quantity <= 0)
+		{
+			items.Remove(item);
+		}
 
         if (onItemChangedCallback != null)
         {

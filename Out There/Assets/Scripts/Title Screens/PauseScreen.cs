@@ -3,11 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class PauseScreen : MonoBehaviour
 {
-    public static bool gameIsPaused = false;
+    public static bool gameIsPaused;
     public GameObject pauseScreen;
 
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	private void Start()
+	{
+		Resume();
+	}
+	void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {

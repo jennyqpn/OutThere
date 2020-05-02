@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BeginningDialoge : MonoBehaviour
 {
-    bool collected = false;
+    public static bool collected = false;
     bool triggering = false;
     public List<Item> items;
 
@@ -26,9 +26,5 @@ public class BeginningDialoge : MonoBehaviour
         if (col.tag == "Player") {
            triggering = true;
         }
-    }
-
-    IEnumerator Switch() {
-        yield return new WaitForSecondsRealtime(10);
     }
 }

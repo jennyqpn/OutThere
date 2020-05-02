@@ -668,6 +668,7 @@ GameObject:
   - component: {fileID: 1842572883}
   - component: {fileID: 1842572882}
   - component: {fileID: 1842572884}
+  - component: {fileID: 1842572885}
   m_Layer: 0
   m_Name: Save Data Script
   m_TagString: Save Data
@@ -713,3 +714,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 353ddf87c5c488c4194e145edc7fd1c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1842572885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842572881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b0d0747a70be4eaf826a9be104ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 11400000, guid: 73ad9c8170257c24ab10b28d9c56ad90, type: 2}
+  - {fileID: 11400000, guid: dc5f44d4ffa02a64ea2fccf1b64fa04a, type: 2}
+  - {fileID: 11400000, guid: c5280005fa3a3d948bb017038f29bdef, type: 2}
+  - {fileID: 11400000, guid: a915f51553e9ec249988aed657a3b61e, type: 2}
+  - {fileID: 11400000, guid: 132049136c1fc1042b04eea469b6ebf9, type: 2}
+  - {fileID: 11400000, guid: bd4c52eba5706c2469e92c93a8f3b57e, type: 2}
+  - {fileID: 11400000, guid: a1548e58f106dcf44b57e91436755e41, type: 2}
+  - {fileID: 11400000, guid: 6f0660b0e886e494fae0ec151b711cd9, type: 2}
+  - {fileID: 11400000, guid: 158f435ff94580e4c98f7c994dbe8af8, type: 2}

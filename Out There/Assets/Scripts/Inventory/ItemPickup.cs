@@ -7,13 +7,8 @@ public class ItemPickup : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            if (Inventory.items.Count < 9) {
                 Inventory.instance.AddItem(item);
                 Destroy(gameObject);
-            }
-            else {
-                Debug.Log("inventory full");
-            }
         }
     }
 }
