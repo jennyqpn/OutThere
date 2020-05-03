@@ -6724,8 +6724,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.2190558e-32, y: 1.3563156e-19, z: 1.3563156e-19,
-    w: 3.8991392e+21}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 8.126677e-10}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -17098,7 +17097,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: C (Cheat) - when near a character press this to gain 4 friendship points
+  m_Text: C (Cheat) - Press this to select a character to gain a friendship point
 --- !u!222 &2064918361
 CanvasRenderer:
   m_ObjectHideFlags: 0

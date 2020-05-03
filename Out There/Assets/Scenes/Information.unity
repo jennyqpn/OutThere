@@ -544,7 +544,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Name: Out There\nCourse: CMPS 427\nSemester: Spring 2020\n\nTeam Members:
-    Jenny Nguyen\r, Jonathan Benoit\r, Jordan Williams\r, Leah Domas\r\n\nIntructions:
+    Jenny Nguyen\r, Jonathan Benoit\r, Jordan Williams\r, Leah Domas\r\n\nInstructions:
     \nYour mission is to terraform this small planet. Your first task is to meet
     and become friends with the locals. The more you talk to them, the more friendlier
     they become!\n\nControls:\n\tCheat - C\n\tInventory - I\n\tMove - WASD\n\n\nPress

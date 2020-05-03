@@ -24780,7 +24780,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: C (Cheat) - when near a character press this to gain 4 friendship points
+  m_Text: C (Cheat) - Press this to select a character to gain a friendship point
 --- !u!222 &1729597879
 CanvasRenderer:
   m_ObjectHideFlags: 0
